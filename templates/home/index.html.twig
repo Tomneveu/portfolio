@@ -6,11 +6,12 @@
 <header>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#Home">ThomasNev</a>
+        <a id="Home" class="navbar-brand" href="#Home">ThomasNev</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
@@ -22,12 +23,16 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-item nav-link" href="#about">&Agrave; propos</a>
+                </li>
             </ul>
         </div>
     </nav>
+
     <div class="titre">
         <h2>Thomas Neveu</h2>
-            <hr class="my-2">
+        <hr class="my-2">
         <h1>D&eacute;veloppeur Web et Web Mobile</h1>
     </div>
 
@@ -75,5 +80,25 @@
 
     </div>
 </div>
+
+<footer class="container-fluid">
+    <div class="d-flex justify-content-around">
+        <div class="p-2 text-center p-5">
+            <ul>
+                <li><a href="#Home">Haut de page</a></li>
+                <li><a href="#skills">Comp&eacute;tences</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="{{ path('admin') }}">Admin</a></li>
+            </ul>
+        </div>
+
+        <div id="about" class="p-2 text-center p-5">
+            <h3>Thomas Neveu</h3>
+            <p>D&eacute;veloppeur Web et Web Mobile</p>
+            <div class="dropdown-divider"></div>
+            <p><a href="mailto:Tneveu91@gmail.com">Tneveu91@gmail.com</a></p>
+        </div>
+    </div>
+</footer>
 
 {% endblock %}
