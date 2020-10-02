@@ -16,7 +16,7 @@ class AdminSkillsController extends AbstractController
      */
     public function index()
     {
-        return $this->render('adminSkills.html.twig', [
+        return $this->render('admin/adminSkills.html.twig', [
             'controller_name' => 'AdminSkillsController',
         ]);
     }
