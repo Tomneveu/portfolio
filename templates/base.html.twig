@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{% block title %}Bienvenue !{% endblock %}</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+  {% block stylesheets %}{% endblock %}
+
+</head>
+
+<body>
+
+  {% block body %}{% endblock %}
+  {% block javascripts %}{% endblock %}
+
+  <footer class="container-fluid">
+    <div class="d-flex justify-content-around">
+      <div class="p-2 text-center p-5">
+        <ul>
+          <li><a href="#Home">Haut de page</a></li>
+          <li><a href="#skills">Comp&eacute;tences</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#admin">Admin</a></li>
+        </ul>
+      </div>
+
+      <div class="p-2 text-center p-5">
+        <h3>Thomas Neveu</h3>
+        <p>D&eacute;veloppeur Web et Web Mobile</p>
+        <div class="dropdown-divider"></div>
+        <p><a href="mailto:Tneveu91@gmail.com">Tneveu91@gmail.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

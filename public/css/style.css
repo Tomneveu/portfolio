@@ -1,0 +1,46 @@
+/* **************************************** RESET **************************************** */
+
+    *{
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style-type: none;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: lighter;
+    }
+
+/* **************************************** BASE - FOOTER **************************************** */
+
+    footer a{
+        color: #000;
+    }
+
+        footer a:hover{
+            color: #888;
+        }
+
+/* **************************************** HOME - HEADER **************************************** */
+
+    header .titre{
+        width: 100%;
+        height: 50vh;
+        background-image: url('../img/header.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.5;
+        text-align: center;
+        padding: 70px 0;
+    }
+
+        header h1,
+        header h2{
+            top: 100%;
+            width: 100%;
+            color: #000;
+            font-weight: lighter;
+        }
+
+        header h2{
+            top: 90%;
+        }
