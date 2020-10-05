@@ -27,7 +27,7 @@ class AdminSkillsController extends AbstractController
     public function createSkill(Request $request)
     {
         $skill = new Skills();
-        $form = $this->createForm(skillType::class, $skill);
+        $form = $this->createForm(SkillType::class, $skill);
         $form->handleRequest($request);
 
         // Validation + traitement
