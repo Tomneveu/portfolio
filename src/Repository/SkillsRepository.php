@@ -28,14 +28,14 @@ class SkillsRepository extends ServiceEntityRepository
         return $this->findBy(array(), array('proprieties' => 'ASC'));
     }
 
-    public function findThree($value) /* pour ne sélectionner que 3 maisons */
+    public function findProps($value)
     {
-        return $this->createQueryBuilder('s') /* 's' est un alias */
-            ->andWhere('s.proprieties = :val') /* on cherhce un id supérieur à une valeur */
-            ->setParameter('val', $value) /* on donne la valeur */
-            ->orderBy('s.id', 'DESC') /* tri en ordre décroissant */
-            ->getQuery() /* requête */
-            ->getResult() /* résultats */
+        return $this->createQueryBuilder('s')
+            ->andWhere('s.proprieties = :val')
+            ->setParameter('val', $value)
+            ->orderBy('s.id', 'DESC')
+            ->getQuery()
+            ->getResult()
         ;
     }
 

@@ -33,9 +33,11 @@
           <!-- <li class="nav-item">
             <a class="nav-link" href="#projects">Mes projets</a>
           </li> -->
+          {% if is_granted('ROLE_ADMIN') %}
           <li class="nav-item">
             <a class="nav-link" href="{{ path('admin_skills') }}">Skills</a>
           </li>
+          {% endif %}
           <li class="nav-item">
             <a class="nav-link" href="{{ path('app_login') }}">Login</a>
           </li>
@@ -55,7 +57,7 @@
       <div class="p-2 text-center p-5">
         <ul>
           <li><a href="{{ path('home') }}">Home page</a></li>
-          <li><a href="{{ path('admin') }}">Home Admin</a></li>
+          <li><a href="{{ path('admin') }}">Admin</a></li>
           <!-- <li><a href="#projects">Projets</a></li> -->
           <!-- <li><a href="#contact">Contact</a></li> -->
           <li><a href="{{ path('app_logout') }}">Logout</a></li>
