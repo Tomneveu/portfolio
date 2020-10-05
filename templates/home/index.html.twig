@@ -15,7 +15,8 @@
                 <img class="card-img-top" src="{{ asset('img/projets/tablet-coffee.jpg') }}" alt="Projet 1">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
@@ -26,7 +27,8 @@
                 <img class="card-img-top" src="{{ asset('img/projets/startup-desktop.jpg') }}" alt="Projet 1">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
@@ -37,7 +39,8 @@
                 <img class="card-img-top" src="{{ asset('img/projets/designers-desk.jpg') }}" alt="Projet 1">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
@@ -56,10 +59,9 @@
                     <h4>Programming Languages/Technologies</h4>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Javascript</li>
-                    <li class="list-group-item">PHP</li>
-                    <li class="list-group-item">HTML</li>
-                    <li class="list-group-item">CSS/SASS</li>
+                    {% for skill in skills1 %}
+                    <li class="list-group-item">{{ skill.name }}</li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
@@ -70,10 +72,9 @@
                     <h4>Frameworks/Libraries</h4>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Node.js</li>
-                    <li class="list-group-item">Bootstrap</li>
-                    <li class="list-group-item">Symfony</li>
-                    <li class="list-group-item">jQuery</li>
+                    {% for skill in skills2 %}
+                    <li class="list-group-item">{{ skill.name }}</li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
@@ -84,15 +85,15 @@
                     <h4>Databases</h4>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">MySQL</li>
-                    <li class="list-group-item">SQL Server</li>
-                    <li class="list-group-item">PostgreSQL</li>
-                    <li class="list-group-item">MongoDB</li>
+                    {% for skill in skills3 %}
+                    <li class="list-group-item">{{ skill.name }}</li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
 
     </div>
+
 </div>
 
 {% endblock %}

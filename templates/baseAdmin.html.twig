@@ -14,7 +14,6 @@
 
 </head>
 
-
 <body>
   {% block body %}
   <header>
@@ -37,11 +36,8 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ path('admin_skills') }}">Skills</a>
           </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li> -->
           <li class="nav-item">
-            <a class="nav-item nav-link" href="#about">About</a>
+            <a class="nav-link" href="{{ path('app_login') }}">Login</a>
           </li>
         </ul>
       </div>
@@ -58,11 +54,11 @@
     <div class="d-flex justify-content-around">
       <div class="p-2 text-center p-5">
         <ul>
-          <!-- <li><a href="#Home">Top page</a></li> -->
-          <!-- <li><a href="#projects">Projets</a></li> -->
-          <li><a href="{{ path('admin_skills') }}">Skills</a></li>
-          <!-- <li><a href="#contact">Contact</a></li> -->
+          <li><a href="{{ path('home') }}">Home page</a></li>
           <li><a href="{{ path('admin') }}">Home Admin</a></li>
+          <!-- <li><a href="#projects">Projets</a></li> -->
+          <!-- <li><a href="#contact">Contact</a></li> -->
+          <li><a href="{{ path('app_logout') }}">Logout</a></li>
         </ul>
       </div>
 

@@ -22,19 +22,22 @@ class SkillsRepository extends ServiceEntityRepository
     // /**
     //  * @return Skills[] Returns an array of Skills objects
     //  */
-    /*
-    public function findByExampleField($value)
+
+    public function findAll()
     {
-        return $this->createQueryBuilder('s')
-            ->andWhere('s.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('s.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
+        return $this->findBy(array(), array('proprieties' => 'ASC'));
+    }
+
+    public function findThree($value) /* pour ne sélectionner que 3 maisons */
+    {
+        return $this->createQueryBuilder('s') /* 's' est un alias */
+            ->andWhere('s.proprieties = :val') /* on cherhce un id supérieur à une valeur */
+            ->setParameter('val', $value) /* on donne la valeur */
+            ->orderBy('s.id', 'DESC') /* tri en ordre décroissant */
+            ->getQuery() /* requête */
+            ->getResult() /* résultats */
         ;
     }
-    */
 
     /*
     public function findOneBySomeField($value): ?Skills

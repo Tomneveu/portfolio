@@ -11,7 +11,7 @@
     <table class="table table-bordered table-hover table-sm text-center">
         <thead>
             <tr>
-                <th scope="col">N°</th>
+                <th scope="col">ID</th>
                 <th scope="col">Name</th>
                 <th scope="col">Proprieties</th>
             </tr>
@@ -19,7 +19,7 @@
         <tbody>
             {% for skill in skills %}
             <tr>
-                <td>{{ loop.index }}</td>
+                <td>{{ skill.id }}</td>
                 <td>{{ skill.name }}</td>
                 <td>{{ skill.proprieties }}</td>
                 <td>
