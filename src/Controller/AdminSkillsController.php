@@ -17,7 +17,7 @@ class AdminSkillsController extends AbstractController
     public function index(SkillsRepository $skillsRepository)
     {
         $skills = $skillsRepository->findAll();
-        
+
         return $this->render('admin/adminSkills.html.twig', [
             'skills' => $skills,
         ]);
@@ -33,16 +33,25 @@ class AdminSkillsController extends AbstractController
         $form = $this->createForm(SkillType::class, $skill);
         $form->handleRequest($request);
 
-        // Validation + traitement
-        if ($form->isSubmitted() && $form->isValid()) {
-            $manager = $this->getDoctrine()->getManager();
-            $manager->persist($skill);
-            $manager->flush();
-            
-            $this->addFlash(
-                'success',
-                'La compétence a bien été ajouté'
-            );
+        if ($form->isSubmitted()) {
+
+            if ($form->isValid()) {
+
+                $manager = $this->getDoctrine()->getManager();
+                $manager->persist($skill);
+                $manager->flush();
+
+                $this->addFlash(
+                    'success',
+                    'Skill has been added'
+                );
+            } else {
+                $this->addFlash(
+                    'danger',
+                    'An error has occurred'
+                );
+            }
+
             return $this->redirectToRoute('admin_skills');
         }
 
@@ -61,10 +70,14 @@ class AdminSkillsController extends AbstractController
         $form = $this->createForm(SkillType::class, $skill);
         $form->handleRequest($request);
 
-        if($form->isSubmitted() && $form->isValid()){
+        if ($form->isSubmitted() && $form->isValid()) {
             $manager = $this->getDoctrine()->getManager();
             $manager->persist($skill);
             $manager->flush();
+            $this->addFlash(
+                'success',
+                'Skill has been changed'
+            );
             return $this->redirectToRoute('admin_skills');
         }
 
@@ -83,6 +96,11 @@ class AdminSkillsController extends AbstractController
         $manager = $this->getDoctrine()->getManager();
         $manager->remove($skill);
         $manager->flush();
+
+        $this->addFlash(
+            'success',
+            'Skill has been deleted'
+        );
 
         return $this->redirectToRoute('admin_skills');
     }

@@ -67,7 +67,7 @@
       </trans-unit>
       <trans-unit id="P6gRaMs" resname="Frameworks/Libraries">
         <source>Frameworks/Libraries</source>
-        <target>Frameworks/Libraries</target>
+        <target>Frameworks/Bibliothèques</target>
       </trans-unit>
       <trans-unit id="YdKv4jS" resname="Databases">
         <source>Databases</source>
