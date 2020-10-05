@@ -47,7 +47,7 @@ class AdminSkillsController extends AbstractController
         }
 
         return $this->render('admin/adminSkillsForm.html.twig', [
-            'formulaireSkill' => $form->createView()
+            'formSkill' => $form->createView()
         ]);
     }
 
@@ -69,7 +69,7 @@ class AdminSkillsController extends AbstractController
         }
 
         return $this->render('admin/adminSkillsForm.html.twig', [
-            'formulaireskill' => $form->createView()
+            'formSkill' => $form->createView()
         ]);
     }
 
