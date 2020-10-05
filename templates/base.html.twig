@@ -49,9 +49,12 @@
       </div>
 
       {% for locale in locales %}
-      {% if locale != app.request.locale %}
-      <a href="{{ path('change_locale', {'locale': locale}) }}">{{ locale }}</a>
-      {% endif %}
+        {% if locale != app.request.locale %}
+          <a href="{{ path('change_locale', {'locale': locale}) }}">
+            {{ locale }}
+            <img src="{{ asset('img/drapeaux/drapeau_' ~ locale ~ '.png') }}" alt="drapeau {{ locale }}">
+          </a>
+        {% endif %}
       {% endfor %}
 
     </nav>
