@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="HQWRtJq" resname="Your comment is pending approval">
+        <source>Your comment is pending approval</source>
+        <target>Votre commentaire est en attente d'approbation</target>
+      </trans-unit>
+      <trans-unit id="UeOOzJL" resname="My Project">
+        <source>My Project</source>
+        <target>Mes Projets</target>
+      </trans-unit>
+      <trans-unit id="9JcBOyh" resname="Top page">
+        <source>Top page</source>
+        <target>Haut de page</target>
+      </trans-unit>
+      <trans-unit id="W1k4Wr7" resname="Welcome !">
+        <source>Welcome !</source>
+        <target>Bienvenue !</target>
+      </trans-unit>
+      <trans-unit id="OnhpU4i" resname="Home">
+        <source>Home</source>
+        <target>Accueil</target>
+      </trans-unit>
+      <trans-unit id="Bp2UV77" resname="My projects">
+        <source>My projects</source>
+        <target>Mes projets</target>
+      </trans-unit>
+      <trans-unit id="6kJNZiQ" resname="My Skills">
+        <source>My Skills</source>
+        <target>Mes Compétences</target>
+      </trans-unit>
+      <trans-unit id="K1w9JnI" resname="Contact">
+        <source>Contact</source>
+        <target>Contact</target>
+      </trans-unit>
+      <trans-unit id="Tvyg0Qx" resname="About">
+        <source>About</source>
+        <target>À propos</target>
+      </trans-unit>
+      <trans-unit id="u7scAli" resname="Page not found Error">
+        <source>Page not found Error</source>
+        <target>Erreur page introuvable</target>
+      </trans-unit>
+      <trans-unit id="dI76BZE" resname="Page not found Error 404">
+        <source>Page not found Error 404</source>
+        <target>Page non trouvée Erreur 404</target>
+      </trans-unit>
+      <trans-unit id="loE5XeR" resname="Contact details">
+        <source>Contact details</source>
+        <target>Détails du contact</target>
+      </trans-unit>
+      <trans-unit id="3NHVIj9" resname="Name">
+        <source>Name</source>
+        <target>Nom</target>
+      </trans-unit>
+      <trans-unit id="lpzL089" resname="Email">
+        <source>Email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="1w7xO.O" resname="Programming Languages/Technologies">
+        <source>Programming Languages/Technologies</source>
+        <target>Langages/Technologies de programmation</target>
+      </trans-unit>
+      <trans-unit id="P6gRaMs" resname="Frameworks/Libraries">
+        <source>Frameworks/Libraries</source>
+        <target>Frameworks/Libraries</target>
+      </trans-unit>
+      <trans-unit id="YdKv4jS" resname="Databases">
+        <source>Databases</source>
+        <target>Bases de données</target>
+      </trans-unit>
+      <trans-unit id="CEXG_K1" resname="Web Developer &amp;amp; Mobile Web">
+        <source>Web Developer &amp;amp; Mobile Web</source>
+        <target>Développeur Web et Web mobile</target>
+      </trans-unit>
+      <trans-unit id="5I3yIxG" resname="The requested page couldn't be located. Checkout for any URL&#10;                misspelling or">
+        <source>The requested page couldn't be located. Checkout for any URL
+                misspelling or</source>
+        <target>La page demandée n'a pas pu être localisée. Vérification de toute faute
+                d'orthographe d'URL ou</target>
+      </trans-unit>
+      <trans-unit id="yBAbsaq" resname="return to the homepage">
+        <source>return to the homepage</source>
+        <target>retour à la page d'accueil</target>
+      </trans-unit>
+      <trans-unit id="JP.te9I" resname="Contact me">
+        <source>Contact me</source>
+        <target>Contactez moi</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

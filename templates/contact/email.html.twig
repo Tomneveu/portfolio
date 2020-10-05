@@ -1,8 +1,8 @@
 <p>
-    <b>Contact details :</b>
+    <b>{% trans %}Contact details{% endtrans %} :</b>
     <ul>
-        <li>Name : {{ lastName|upper }} {{ firstName }}</li>
-        <li>Email : {{ email }}</li>
+        <li>{% trans %}Name{% endtrans %} : {{ lastName|upper }} {{ firstName }}</li>
+        <li>{% trans %}Email{% endtrans %} : {{ email }}</li>
     </ul>
 </p>
 
