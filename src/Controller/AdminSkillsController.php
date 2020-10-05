@@ -14,10 +14,12 @@ class AdminSkillsController extends AbstractController
     /**
      * @Route("/admin/skills", name="admin_skills")
      */
-    public function index()
+    public function index(SkillsRepository $skillsRepository)
     {
+        $skills = $skillsRepository->findAll();
+        
         return $this->render('admin/adminSkills.html.twig', [
-            'controller_name' => 'AdminSkillsController',
+            'skills' => $skills,
         ]);
     }
 
@@ -27,6 +29,7 @@ class AdminSkillsController extends AbstractController
     public function createSkill(Request $request)
     {
         $skill = new Skills();
+
         $form = $this->createForm(SkillType::class, $skill);
         $form->handleRequest($request);
 
@@ -51,7 +54,7 @@ class AdminSkillsController extends AbstractController
     /**
      * @Route("/admin/skills/update-{id}", name="skill_update")
      */
-    public function updateSkill(skillsRepository $skillsRepository, $id, Request $request)
+    public function updateSkill(SkillsRepository $skillsRepository, $id, Request $request)
     {
         $skill = $skillsRepository->find($id);
 
@@ -73,7 +76,7 @@ class AdminSkillsController extends AbstractController
     /**
      * @Route("/admin/skills/delete-{id}", name="skill_delete")
      */
-    public function deleteskill(skillsRepository $skillsRepository, $id)
+    public function deleteskill(SkillsRepository $skillsRepository, $id)
     {
         $skill = $skillsRepository->find($id);
 

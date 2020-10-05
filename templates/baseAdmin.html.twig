@@ -29,30 +29,24 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="{{ path('home') }}">Accueil <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="{{ path('home') }}">Home <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="#projects">Mes projets</a>
-          </li>
+          </li> -->
           <li class="nav-item">
-            <a class="nav-link" href="#skills">Comp&eacute;tences</a>
+            <a class="nav-link" href="{{ path('admin_skills') }}">Skills</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="#contact">Contact</a>
-          </li>
+          </li> -->
           <li class="nav-item">
-            <a class="nav-item nav-link" href="#about">&Agrave; propos</a>
+            <a class="nav-item nav-link" href="#about">About</a>
           </li>
         </ul>
       </div>
 
     </nav>
-
-    <div class="titre">
-      <h2>Thomas Neveu</h2>
-      <hr class="my-2">
-      <h1>D&eacute;veloppeur Web et Web Mobile</h1>
-    </div>
 
   </header>
 
@@ -64,17 +58,17 @@
     <div class="d-flex justify-content-around">
       <div class="p-2 text-center p-5">
         <ul>
-          <li><a href="#Home">Haut de page</a></li>
-          <li><a href="#projects">Projets</a></li>
+          <li><a href="#Home">Top page</a></li>
+          <!-- <li><a href="#projects">Projets</a></li>
           <li><a href="#skills">Comp&eacute;tences</a></li>
-          <!-- <li><a href="#contact">Contact</a></li> -->
-          <li><a href="{{ path('admin') }}">Admin</a></li>
+          <li><a href="#contact">Contact</a></li> -->
+          <li><a href="{{ path('admin') }}">Home Admin</a></li>
         </ul>
       </div>
 
       <div id="about" class="p-2 text-center p-5">
         <h3>Thomas Neveu</h3>
-        <p>D&eacute;veloppeur Web et Web Mobile</p>
+        <p>Web Developer & Mobile Web </p>
         <div class="dropdown-divider"></div>
         <p><a href="mailto:Tneveu91@gmail.com">Tneveu91@gmail.com</a></p>
       </div>
