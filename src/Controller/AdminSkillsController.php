@@ -98,7 +98,7 @@ class AdminSkillsController extends AbstractController
         $manager->flush();
 
         $this->addFlash(
-            'success',
+            'warning',
             'Skill has been deleted'
         );
 

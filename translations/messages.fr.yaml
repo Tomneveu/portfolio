@@ -1,0 +1,13 @@
+# form.contact.lastName.label: 'Nom'
+form:
+    contact:
+        lastName:
+            label: 'Nom'
+        firstName:
+            label: 'Prénom'
+        email:
+            label: 'Email'
+        message:
+            label: 'Message'
+        submit:
+            label: 'Envoyer'

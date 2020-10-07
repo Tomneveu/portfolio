@@ -1,0 +1,12 @@
+form:
+    contact:
+        lastName:
+            label: 'Last Name'
+        firstName:
+            label: 'First Name'
+        email:
+            label: 'Email'
+        message:
+            label: 'Message'
+        submit:
+            label: 'Submit'

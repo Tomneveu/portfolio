@@ -9,10 +9,6 @@
         <source>Your comment is pending approval</source>
         <target>Votre commentaire est en attente d'approbation</target>
       </trans-unit>
-      <trans-unit id="UeOOzJL" resname="My Project">
-        <source>My Project</source>
-        <target>Mes Projets</target>
-      </trans-unit>
       <trans-unit id="9JcBOyh" resname="Top page">
         <source>Top page</source>
         <target>Haut de page</target>
@@ -24,14 +20,6 @@
       <trans-unit id="OnhpU4i" resname="Home">
         <source>Home</source>
         <target>Accueil</target>
-      </trans-unit>
-      <trans-unit id="Bp2UV77" resname="My projects">
-        <source>My projects</source>
-        <target>Mes projets</target>
-      </trans-unit>
-      <trans-unit id="6kJNZiQ" resname="My Skills">
-        <source>My Skills</source>
-        <target>Mes Compétences</target>
       </trans-unit>
       <trans-unit id="K1w9JnI" resname="Contact">
         <source>Contact</source>
@@ -61,21 +49,9 @@
         <source>Email</source>
         <target>Email</target>
       </trans-unit>
-      <trans-unit id="1w7xO.O" resname="Programming Languages/Technologies">
-        <source>Programming Languages/Technologies</source>
-        <target>Langages/Technologies de programmation</target>
-      </trans-unit>
-      <trans-unit id="P6gRaMs" resname="Frameworks/Libraries">
-        <source>Frameworks/Libraries</source>
-        <target>Frameworks/Bibliothèques</target>
-      </trans-unit>
       <trans-unit id="YdKv4jS" resname="Databases">
         <source>Databases</source>
         <target>Bases de données</target>
-      </trans-unit>
-      <trans-unit id="CEXG_K1" resname="Web Developer &amp;amp; Mobile Web">
-        <source>Web Developer &amp;amp; Mobile Web</source>
-        <target>Développeur Web et Web mobile</target>
       </trans-unit>
       <trans-unit id="5I3yIxG" resname="The requested page couldn't be located. Checkout for any URL&#10;                misspelling or">
         <source>The requested page couldn't be located. Checkout for any URL
@@ -90,6 +66,30 @@
       <trans-unit id="JP.te9I" resname="Contact me">
         <source>Contact me</source>
         <target>Contactez moi</target>
+      </trans-unit>
+      <trans-unit id=".cwNZB4" resname="Programming Languages / Technologies">
+        <source>Programming Languages / Technologies</source>
+        <target>Langages de programmation / Technologies</target>
+      </trans-unit>
+      <trans-unit id="h3O0dkj" resname="Frameworks / Libraries">
+        <source>Frameworks / Libraries</source>
+        <target>Frameworks / Bibliothèques</target>
+      </trans-unit>
+      <trans-unit id="BOKpcor" resname="Projects">
+        <source>Projects</source>
+        <target>Projets</target>
+      </trans-unit>
+      <trans-unit id="ZtD1I6N" resname="Skills">
+        <source>Skills</source>
+        <target>Compétences</target>
+      </trans-unit>
+      <trans-unit id="3GONSmq" resname="Thomas Neveu Web Developer &amp;amp; Mobile Web">
+        <source>Thomas Neveu Web Developer &amp;amp; Mobile Web</source>
+        <target>Thomas Neveu Développeur Web et Web Mobile</target>
+      </trans-unit>
+      <trans-unit id="CEXG_K1" resname="Web Developer &amp;amp; Mobile Web">
+        <source>Web Developer &amp;amp; Mobile Web</source>
+        <target>Développeur Web et Web Mobile</target>
       </trans-unit>
     </body>
   </file>
