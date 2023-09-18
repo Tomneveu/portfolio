@@ -9,16 +9,6 @@
     font-weight: lighter;
 }
 
-/* **************************************** BASE - FOOTER **************************************** */
-
-    footer a{
-        color: #000;
-    }
-
-    footer a:hover{
-        color: #888;
-    }
-
 /* **************************************** HOME - HEADER **************************************** */
 
     header .navbar {
@@ -55,14 +45,14 @@
     .text {
         background-color: white;
         color: black;
-        font-size: 3vw; 
+        font-size: 2vw; 
         font-weight: bold;
         margin: 0 auto;
-        padding: 1px;
+        padding: 10px;
         width: 25%;
         text-align: center;
         position: absolute;
-        top: 50%;
+        top: 60%;
         left: 50%;
         transform: translate(-50%, -35%);
         mix-blend-mode: screen;
@@ -108,3 +98,13 @@
 #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
   }
+
+/* **************************************** BASE - FOOTER **************************************** */
+
+footer a{
+    color: #000;
+}
+
+footer a:hover{
+    color: #888;
+}

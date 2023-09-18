@@ -6,4 +6,41 @@
 
 {{ parent() }}
 
+<div class="container">
+    <h3 id="projects" class="h1 my-5">Admin</h3>
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="card bg-light mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Compétences</h5>
+                    <p class="card-text">Voir le tableau de toutes les compétences.</p>
+                    <a href="{{ path('admin_skills') }}" class="btn btn-primary">Voir liste</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card bg-light mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Ajouter compétences</h5>
+                    <p class="card-text">Formulaire pour ajouter de nouvelles compétences.</p>
+                    <a href="{{ path('skill_create') }}" class="btn btn-primary">Ajouter compétences</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card bg-light mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Inscription</h5>
+                    <p class="card-text">...</p>
+                    <a href="{{ path('app_register') }}" class="btn btn-primary">S'inscrire</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
 {% endblock %}

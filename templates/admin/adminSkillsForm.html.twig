@@ -1,4 +1,4 @@
-{% extends '/admin/admin.html.twig' %}
+{% extends 'baseAdmin.html.twig' %}
 
 {% block title %}Skills - form{% endblock title %}
 
@@ -6,8 +6,8 @@
 
 {{ parent() }}
 
-<div class="col-10 p-3">
-    <h2>Form Skills</h2>
+<div class="container">
+    <h3 id="projects" class="h1 my-5">Form skills</h3>
     {{ form_start(formSkill) }}
     {{ form_end(formSkill) }}
 </div>
