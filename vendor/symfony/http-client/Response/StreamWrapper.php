@@ -22,7 +22,7 @@ use Symfony\Contracts\HttpClient\ResponseInterface;
  */
 class StreamWrapper
 {
-    /** @var resource|string|null */
+    /** @var resource|null */
     public $context;
 
     /** @var HttpClientInterface */
@@ -31,7 +31,7 @@ class StreamWrapper
     /** @var ResponseInterface */
     private $response;
 
-    /** @var resource|null */
+    /** @var resource|string|null */
     private $content;
 
     /** @var resource|null */
@@ -49,7 +49,7 @@ class StreamWrapper
      */
     public static function createResource(ResponseInterface $response, HttpClientInterface $client = null)
     {
-        if ($response instanceof TraceableResponse || (\is_callable([$response, 'toStream']) && isset(class_uses($response)[ResponseTrait::class]))) {
+        if ($response instanceof StreamableInterface) {
             $stack = debug_backtrace(\DEBUG_BACKTRACE_PROVIDE_OBJECT | \DEBUG_BACKTRACE_IGNORE_ARGS, 2);
 
             if ($response !== ($stack[1]['object'] ?? null)) {
@@ -61,20 +61,18 @@ class StreamWrapper
             throw new \InvalidArgumentException(sprintf('Providing a client to "%s()" is required when the response doesn\'t have any "stream()" method.', __CLASS__));
         }
 
-        if (false === stream_wrapper_register('symfony', __CLASS__, \STREAM_IS_URL)) {
+        static $registered = false;
+
+        if (!$registered = $registered || stream_wrapper_register(strtr(__CLASS__, '\\', '-'), __CLASS__)) {
             throw new \RuntimeException(error_get_last()['message'] ?? 'Registering the "symfony" stream wrapper failed.');
         }
 
-        try {
-            $context = [
-                'client' => $client ?? $response,
-                'response' => $response,
-            ];
+        $context = [
+            'client' => $client ?? $response,
+            'response' => $response,
+        ];
 
-            return fopen('symfony://'.$response->getInfo('url'), 'r', false, stream_context_create(['symfony' => $context])) ?: null;
-        } finally {
-            stream_wrapper_unregister('symfony');
-        }
+        return fopen(strtr(__CLASS__, '\\', '-').'://'.$response->getInfo('url'), 'r', false, stream_context_create(['symfony' => $context]));
     }
 
     public function getResponse(): ResponseInterface
@@ -83,14 +81,15 @@ class StreamWrapper
     }
 
     /**
-     * @param resource|null $handle  The resource handle that should be monitored when
-     *                               stream_select() is used on the created stream
-     * @param resource|null $content The seekable resource where the response body is buffered
+     * @param resource|callable|null $handle  The resource handle that should be monitored when
+     *                                        stream_select() is used on the created stream
+     * @param resource|null          $content The seekable resource where the response body is buffered
      */
     public function bindHandles(&$handle, &$content): void
     {
         $this->handle = &$handle;
         $this->content = &$content;
+        $this->offset = null;
     }
 
     public function stream_open(string $path, string $mode, int $options): bool
@@ -135,7 +134,7 @@ class StreamWrapper
                 }
             }
 
-            if (0 !== fseek($this->content, $this->offset)) {
+            if (0 !== fseek($this->content, $this->offset ?? 0)) {
                 return false;
             }
 
@@ -164,6 +163,11 @@ class StreamWrapper
             try {
                 $this->eof = true;
                 $this->eof = !$chunk->isTimeout();
+
+                if (!$this->eof && !$this->blocking) {
+                    return '';
+                }
+
                 $this->eof = $chunk->isLast();
 
                 if ($chunk->isFirst()) {
@@ -206,7 +210,7 @@ class StreamWrapper
 
     public function stream_tell(): int
     {
-        return $this->offset;
+        return $this->offset ?? 0;
     }
 
     public function stream_eof(): bool
@@ -216,6 +220,11 @@ class StreamWrapper
 
     public function stream_seek(int $offset, int $whence = \SEEK_SET): bool
     {
+        if (null === $this->content && null === $this->offset) {
+            $this->response->getStatusCode();
+            $this->offset = 0;
+        }
+
         if (!\is_resource($this->content) || 0 !== fseek($this->content, 0, \SEEK_END)) {
             return false;
         }
@@ -223,7 +232,7 @@ class StreamWrapper
         $size = ftell($this->content);
 
         if (\SEEK_CUR === $whence) {
-            $offset += $this->offset;
+            $offset += $this->offset ?? 0;
         }
 
         if (\SEEK_END === $whence || $size < $offset) {
@@ -266,7 +275,7 @@ class StreamWrapper
         if (\STREAM_CAST_FOR_SELECT === $castAs) {
             $this->response->getHeaders(false);
 
-            return $this->handle ?? false;
+            return (\is_callable($this->handle) ? ($this->handle)() : $this->handle) ?? false;
         }
 
         return false;
@@ -289,7 +298,7 @@ class StreamWrapper
             'uid' => 0,
             'gid' => 0,
             'rdev' => 0,
-            'size' => (int) ($headers['content-length'][0] ?? 0),
+            'size' => (int) ($headers['content-length'][0] ?? -1),
             'atime' => 0,
             'mtime' => strtotime($headers['last-modified'][0] ?? '') ?: 0,
             'ctime' => 0,

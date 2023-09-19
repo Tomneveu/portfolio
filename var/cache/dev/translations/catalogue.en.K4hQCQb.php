@@ -3,34 +3,6 @@
 use Symfony\Component\Translation\MessageCatalogue;
 
 $catalogue = new MessageCatalogue('en', array (
-  'messages' => 
-  array (
-    'form.contact.lastName.label' => 'Last Name',
-    'form.contact.firstName.label' => 'First Name',
-    'form.contact.email.label' => 'Email',
-    'form.contact.message.label' => 'Message',
-    'form.contact.submit.label' => 'Submit',
-  ),
-  'security' => 
-  array (
-    'An authentication exception occurred.' => 'An authentication exception occurred.',
-    'Authentication credentials could not be found.' => 'Authentication credentials could not be found.',
-    'Authentication request could not be processed due to a system problem.' => 'Authentication request could not be processed due to a system problem.',
-    'Invalid credentials.' => 'Invalid credentials.',
-    'Cookie has already been used by someone else.' => 'Cookie has already been used by someone else.',
-    'Not privileged to request the resource.' => 'Not privileged to request the resource.',
-    'Invalid CSRF token.' => 'Invalid CSRF token.',
-    'No authentication provider found to support the authentication token.' => 'No authentication provider found to support the authentication token.',
-    'No session available, it either timed out or cookies are not enabled.' => 'No session available, it either timed out or cookies are not enabled.',
-    'No token could be found.' => 'No token could be found.',
-    'Username could not be found.' => 'Username could not be found.',
-    'Account has expired.' => 'Account has expired.',
-    'Credentials have expired.' => 'Credentials have expired.',
-    'Account is disabled.' => 'Account is disabled.',
-    'Account is locked.' => 'Account is locked.',
-    'Too many failed login attempts, please try again later.' => 'Too many failed login attempts, please try again later.',
-    'Invalid or expired login link.' => 'Invalid or expired login link.',
-  ),
   'validators' => 
   array (
     'This value should be false.' => 'This value should be false.',
@@ -129,6 +101,16 @@ $catalogue = new MessageCatalogue('en', array (
     'This value should satisfy at least one of the following constraints:' => 'This value should satisfy at least one of the following constraints:',
     'Each element of this collection should satisfy its own set of constraints.' => 'Each element of this collection should satisfy its own set of constraints.',
     'This value is not a valid International Securities Identification Number (ISIN).' => 'This value is not a valid International Securities Identification Number (ISIN).',
+    'This value should be a valid expression.' => 'This value should be a valid expression.',
+    'This value is not a valid CSS color.' => 'This value is not a valid CSS color.',
+    'This value is not a valid CIDR notation.' => 'This value is not a valid CIDR notation.',
+    'The value of the netmask should be between {{ min }} and {{ max }}.' => 'The value of the netmask should be between {{ min }} and {{ max }}.',
+    'The filename is too long. It should have {{ filename_max_length }} character or less.|The filename is too long. It should have {{ filename_max_length }} characters or less.' => 'The filename is too long. It should have {{ filename_max_length }} character or less.|The filename is too long. It should have {{ filename_max_length }} characters or less.',
+    'The password strength is too low. Please use a stronger password.' => 'The password strength is too low. Please use a stronger password.',
+    'This value contains characters that are not allowed by the current restriction-level.' => 'This value contains characters that are not allowed by the current restriction-level.',
+    'Using invisible characters is not allowed.' => 'Using invisible characters is not allowed.',
+    'Mixing numbers from different scripts is not allowed.' => 'Mixing numbers from different scripts is not allowed.',
+    'Using hidden overlay characters is not allowed.' => 'Using hidden overlay characters is not allowed.',
     'This form should not contain extra fields.' => 'This form should not contain extra fields.',
     'The uploaded file was too large. Please try to upload a smaller file.' => 'The uploaded file was too large. Please try to upload a smaller file.',
     'The CSRF token is invalid. Please try to resubmit the form.' => 'The CSRF token is invalid. Please try to resubmit the form.',
@@ -162,6 +144,36 @@ $catalogue = new MessageCatalogue('en', array (
     'Please select a valid option.' => 'Please select a valid option.',
     'Please select a valid range.' => 'Please select a valid range.',
     'Please enter a valid week.' => 'Please enter a valid week.',
+  ),
+  'security' => 
+  array (
+    'An authentication exception occurred.' => 'An authentication exception occurred.',
+    'Authentication credentials could not be found.' => 'Authentication credentials could not be found.',
+    'Authentication request could not be processed due to a system problem.' => 'Authentication request could not be processed due to a system problem.',
+    'Invalid credentials.' => 'Invalid credentials.',
+    'Cookie has already been used by someone else.' => 'Cookie has already been used by someone else.',
+    'Not privileged to request the resource.' => 'Not privileged to request the resource.',
+    'Invalid CSRF token.' => 'Invalid CSRF token.',
+    'No authentication provider found to support the authentication token.' => 'No authentication provider found to support the authentication token.',
+    'No session available, it either timed out or cookies are not enabled.' => 'No session available, it either timed out or cookies are not enabled.',
+    'No token could be found.' => 'No token could be found.',
+    'Username could not be found.' => 'Username could not be found.',
+    'Account has expired.' => 'Account has expired.',
+    'Credentials have expired.' => 'Credentials have expired.',
+    'Account is disabled.' => 'Account is disabled.',
+    'Account is locked.' => 'Account is locked.',
+    'Too many failed login attempts, please try again later.' => 'Too many failed login attempts, please try again later.',
+    'Invalid or expired login link.' => 'Invalid or expired login link.',
+    'Too many failed login attempts, please try again in %minutes% minute.' => 'Too many failed login attempts, please try again in %minutes% minute.',
+    'Too many failed login attempts, please try again in %minutes% minutes.' => 'Too many failed login attempts, please try again in %minutes% minutes.',
+  ),
+  'messages' => 
+  array (
+    'form.contact.lastName.label' => 'Last Name',
+    'form.contact.firstName.label' => 'First Name',
+    'form.contact.email.label' => 'Email',
+    'form.contact.message.label' => 'Message',
+    'form.contact.submit.label' => 'Submit',
   ),
 ));
 

@@ -38,24 +38,30 @@ final class HttpClientDataCollector extends DataCollector implements LateDataCol
      */
     public function collect(Request $request, Response $response, \Throwable $exception = null)
     {
-        $this->reset();
-
-        foreach ($this->clients as $name => $client) {
-            [$errorCount, $traces] = $this->collectOnClient($client);
-
-            $this->data['clients'][$name] = [
-                'traces' => $traces,
-                'error_count' => $errorCount,
-            ];
-
-            $this->data['request_count'] += \count($traces);
-            $this->data['error_count'] += $errorCount;
-        }
+        $this->lateCollect();
     }
 
     public function lateCollect()
     {
-        foreach ($this->clients as $client) {
+        $this->data['request_count'] = $this->data['request_count'] ?? 0;
+        $this->data['error_count'] = $this->data['error_count'] ?? 0;
+        $this->data += ['clients' => []];
+
+        foreach ($this->clients as $name => $client) {
+            [$errorCount, $traces] = $this->collectOnClient($client);
+
+            $this->data['clients'] += [
+                $name => [
+                    'traces' => [],
+                    'error_count' => 0,
+                ],
+            ];
+
+            $this->data['clients'][$name]['traces'] = array_merge($this->data['clients'][$name]['traces'], $traces);
+            $this->data['request_count'] += \count($traces);
+            $this->data['error_count'] += $errorCount;
+            $this->data['clients'][$name]['error_count'] += $errorCount;
+
             $client->reset();
         }
     }
@@ -98,6 +104,7 @@ final class HttpClientDataCollector extends DataCollector implements LateDataCol
         $errorCount = 0;
         $baseInfo = [
             'response_headers' => 1,
+            'retry_count' => 1,
             'redirect_count' => 1,
             'redirect_url' => 1,
             'user_data' => 1,
@@ -150,6 +157,11 @@ final class HttpClientDataCollector extends DataCollector implements LateDataCol
                 $content = ['response_json' => $content];
             } else {
                 $content = [];
+            }
+
+            if (isset($info['retry_count'])) {
+                $content['retries'] = $info['previous_info'];
+                unset($info['previous_info']);
             }
 
             $debugInfo = array_diff_key($info, $baseInfo);

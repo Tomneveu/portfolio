@@ -68,7 +68,7 @@
         <target>Contactez moi</target>
       </trans-unit>
       <trans-unit id=".cwNZB4" resname="Programming Languages / Technologies">
-        <source>Languages / Technologies</source>
+        <source>Programming Languages / Technologies</source>
         <target>Langages / Technologies</target>
       </trans-unit>
       <trans-unit id="h3O0dkj" resname="Frameworks / Libraries">
@@ -90,6 +90,42 @@
       <trans-unit id="CEXG_K1" resname="Web Developer &amp;amp; Mobile Web">
         <source>Web Developer &amp;amp; Mobile Web</source>
         <target>Développeur Web et Web Mobile</target>
+      </trans-unit>
+      <trans-unit id="wcIksDz" resname="Admin">
+        <source>Admin</source>
+        <target>Admin</target>
+      </trans-unit>
+      <trans-unit id="XiuOllA" resname="Sign up">
+        <source>Sign up</source>
+        <target>S'inscrire</target>
+      </trans-unit>
+      <trans-unit id="SdCdacI" resname="Languages / Technologies">
+        <source>Languages / Technologies</source>
+        <target>Langages / Technologies</target>
+      </trans-unit>
+      <trans-unit id="SPDT05f" resname="Sign out">
+        <source>Sign out</source>
+        <target>Se déconnecter</target>
+      </trans-unit>
+      <trans-unit id="dpAPG.0" resname="Back">
+        <source>Back</source>
+        <target>Retour</target>
+      </trans-unit>
+      <trans-unit id="v9QCsvb" resname="Sign in">
+        <source>Sign in</source>
+        <target>Se connecter</target>
+      </trans-unit>
+      <trans-unit id="0sf2vgm" resname="Home Page">
+        <source>Home Page</source>
+        <target>Page d'accueil</target>
+      </trans-unit>
+      <trans-unit id="jzzgIrJ" resname="Home admin">
+        <source>Home admin</source>
+        <target>Accueil admin</target>
+      </trans-unit>
+      <trans-unit id="JUBAH1c" resname="List Skills">
+        <source>List Skills</source>
+        <target>Liste des compétences</target>
       </trans-unit>
     </body>
   </file>

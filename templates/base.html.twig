@@ -15,11 +15,8 @@
 
 <body>
   {% block body %}
-
   <header>
-
     <div class="d-flex justify-content-between">
-
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a id="Home" class="navbar-brand" href="{{ path('home') }}">ThomDev</a>
 
@@ -53,12 +50,18 @@
             <li class="nav-item">
               <a class="nav-link" href="{{ path('contact') }}">{% trans %}Contact{% endtrans %}</a>
             </li>
+            {% if is_granted('ROLE_ADMIN') %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ path('admin') }}">{% trans %}Admin{% endtrans %}</a>
+            </li>
+            {% endif %}
           </ul>
 
           <div class="ml-auto p-2 bd-highlight">
             {% if app.user %}
             <span class="navbar-text text-white px-2">{{ app.user.username }} -
-              <a class="p-2 mb-2 bg-secondary text-dark" href="{{ path('app_logout') }}">Sign out</a>
+              <a class="p-2 mb-2 bg-secondary text-dark" href="{{ path('app_logout') }}">{% trans %}Sign out{% endtrans
+                %}</a>
             </span>
             {% endif %}
           </div>
@@ -91,9 +94,13 @@
   <div class="container">
     <footer class="py-3 my-4">
       <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-        <li class="nav-item"><a href="{{ path('app_login') }}" class="nav-link px-2 text-muted">Admin</a></li>
-        <li class="nav-item"><a href="{{ path('app_register') }}" class="nav-link px-2 text-muted">Sign up</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">{% trans %}Home{% endtrans %}</a></li>
+        {% if is_granted('ROLE_ADMIN') %}
+        <li class="nav-item"><a href="{{ path('app_login') }}" class="nav-link px-2 text-muted">{% trans %}Admin{%
+            endtrans %}</a></li>
+        {% endif %}
+        <li class="nav-item"><a href="{{ path('app_login') }}" class="nav-link px-2 text-muted">{% trans %}Sign in{%
+            endtrans %}</a></li>
         <li class="nav-item"><a href="{{ path('contact') }}" class="nav-link px-2 text-muted"><svg width="1em"
               height="1em" viewBox="0 0 16 16" class="bi bi-envelope-fill" fill="currentColor"
               xmlns="http://www.w3.org/2000/svg">
@@ -101,7 +108,7 @@
                 d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
             </svg>
             Contact</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">{% trans %}About{% endtrans %}</a></li>
       </ul>
       <p class="text-center text-muted">{{ copyright|raw }}</p>
     </footer>
