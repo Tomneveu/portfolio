@@ -158,7 +158,7 @@ class __TwigTemplate_d6cace0192c9c47f4f4f1525c22865fe extends Template
                 <li class=\"list-group-item disabled\">
                     <h4>";
         // line 59
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Programming Languages / Technologies", [], "messages");
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Languages / Technologies", [], "messages");
         echo "</h4>
                 </li>
                 ";
@@ -319,7 +319,7 @@ class __TwigTemplate_d6cace0192c9c47f4f4f1525c22865fe extends Template
         <div class=\"col-md-4 p-3\">
             <ul class=\"list-group\">
                 <li class=\"list-group-item disabled\">
-                    <h4>{% trans %}Programming Languages / Technologies{% endtrans %}</h4>
+                    <h4>{% trans %}Languages / Technologies{% endtrans %}</h4>
                 </li>
                 {% for skill in skills1 %}
                 <li class=\"list-group-item\">{{ skill.name }}</li>

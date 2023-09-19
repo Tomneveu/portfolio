@@ -66,34 +66,33 @@ class __TwigTemplate_eb3a4943d641fffac5237f6c8d7272ad extends Template
         // line 13
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 14
-        echo "
-</head>
+        echo "</head>
 
 <body>
   ";
-        // line 18
+        // line 17
         $this->displayBlock('body', $context, $blocks);
-        // line 90
+        // line 88
         echo "
   ";
-        // line 91
+        // line 89
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 92
+        // line 90
         echo "
   <div class=\"container\">
     <footer class=\"py-3 my-4\">
       <ul class=\"nav justify-content-center border-bottom pb-3 mb-3\">
         <li class=\"nav-item\"><a href=\"#\" class=\"nav-link px-2 text-muted\">Home</a></li>
         <li class=\"nav-item\"><a href=\"";
-        // line 97
+        // line 95
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
         echo "\" class=\"nav-link px-2 text-muted\">Admin</a></li>
         <li class=\"nav-item\"><a href=\"";
-        // line 98
+        // line 96
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
         echo "\" class=\"nav-link px-2 text-muted\">Sign up</a></li>
         <li class=\"nav-item\"><a href=\"";
-        // line 99
+        // line 97
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact");
         echo "\" class=\"nav-link px-2 text-muted\"><svg width=\"1em\"
               height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-envelope-fill\" fill=\"currentColor\"
@@ -105,8 +104,8 @@ class __TwigTemplate_eb3a4943d641fffac5237f6c8d7272ad extends Template
         <li class=\"nav-item\"><a href=\"#\" class=\"nav-link px-2 text-muted\">About</a></li>
       </ul>
       <p class=\"text-center text-muted\">";
-        // line 108
-        echo (isset($context["copyright"]) || array_key_exists("copyright", $context) ? $context["copyright"] : (function () { throw new RuntimeError('Variable "copyright" does not exist.', 108, $this->source); })());
+        // line 106
+        echo (isset($context["copyright"]) || array_key_exists("copyright", $context) ? $context["copyright"] : (function () { throw new RuntimeError('Variable "copyright" does not exist.', 106, $this->source); })());
         echo "</p>
     </footer>
   </div>
@@ -122,7 +121,7 @@ class __TwigTemplate_eb3a4943d641fffac5237f6c8d7272ad extends Template
   <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js\"></script>
   <script src=\"https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js\"></script>
   <script src=\"";
-        // line 122
+        // line 120
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/main.js"), "html", null, true);
         echo "\"></script>
 
@@ -174,7 +173,7 @@ class __TwigTemplate_eb3a4943d641fffac5237f6c8d7272ad extends Template
 
     }
 
-    // line 18
+    // line 17
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -184,7 +183,7 @@ class __TwigTemplate_eb3a4943d641fffac5237f6c8d7272ad extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 19
+        // line 18
         echo "
   <header>
 
@@ -192,24 +191,24 @@ class __TwigTemplate_eb3a4943d641fffac5237f6c8d7272ad extends Template
 
       <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
         <a id=\"Home\" class=\"navbar-brand\" href=\"";
-        // line 25
+        // line 24
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\">ThomDev</a>
 
         ";
-        // line 27
+        // line 26
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["locales"]) || array_key_exists("locales", $context) ? $context["locales"] : (function () { throw new RuntimeError('Variable "locales" does not exist.', 27, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["locales"]) || array_key_exists("locales", $context) ? $context["locales"] : (function () { throw new RuntimeError('Variable "locales" does not exist.', 26, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["locale"]) {
-            // line 28
+            // line 27
             echo "        ";
-            if (($context["locale"] != twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 28, $this->source); })()), "request", [], "any", false, false, false, 28), "locale", [], "any", false, false, false, 28))) {
-                // line 29
+            if (($context["locale"] != twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 27, $this->source); })()), "request", [], "any", false, false, false, 27), "locale", [], "any", false, false, false, 27))) {
+                // line 28
                 echo "        <a class=\"navbar-brand\" href=\"";
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("change_locale", ["locale" => $context["locale"]]), "html", null, true);
                 echo "\">
           <img src=\"";
-                // line 30
+                // line 29
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl((("img/drapeaux/drapeau_" . $context["locale"]) . ".png")), "html", null, true);
                 echo "\" alt=\"drapeau ";
                 echo twig_escape_filter($this->env, $context["locale"], "html", null, true);
@@ -217,13 +216,13 @@ class __TwigTemplate_eb3a4943d641fffac5237f6c8d7272ad extends Template
         </a>
         ";
             }
-            // line 33
+            // line 32
             echo "        ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['locale'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 34
+        // line 33
         echo "
         <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\"
           aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
@@ -234,7 +233,7 @@ class __TwigTemplate_eb3a4943d641fffac5237f6c8d7272ad extends Template
           <ul class=\"navbar-nav\">
             <li class=\"nav-item active\">
               <a class=\"nav-link\" href=\"";
-        // line 43
+        // line 42
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\">";
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Home", [], "messages");
@@ -243,21 +242,21 @@ class __TwigTemplate_eb3a4943d641fffac5237f6c8d7272ad extends Template
             </li>
             <li class=\"nav-item\">
               <a class=\"nav-link\" href=\"#projects\">";
-        // line 47
+        // line 46
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Projects", [], "messages");
         echo "</a>
               <!-- <a class=\"nav-link\" href=\"#projects\">Mes projets</a> -->
             </li>
             <li class=\"nav-item\">
               <a class=\"nav-link\" href=\"#skills\">";
-        // line 51
+        // line 50
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Skills", [], "messages");
         echo "</a>
               <!-- <a class=\"nav-link\" href=\"#skills\">Comp&eacute;tences</a> -->
             </li>
             <li class=\"nav-item\">
               <a class=\"nav-link\" href=\"";
-        // line 55
+        // line 54
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact");
         echo "\">";
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Contact", [], "messages");
@@ -267,30 +266,29 @@ class __TwigTemplate_eb3a4943d641fffac5237f6c8d7272ad extends Template
 
           <div class=\"ml-auto p-2 bd-highlight\">
             ";
-        // line 60
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 60, $this->source); })()), "user", [], "any", false, false, false, 60)) {
-            // line 61
+        // line 59
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 59, $this->source); })()), "user", [], "any", false, false, false, 59)) {
+            // line 60
             echo "            <span class=\"navbar-text text-white px-2\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 61, $this->source); })()), "user", [], "any", false, false, false, 61), "username", [], "any", false, false, false, 61), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 60, $this->source); })()), "user", [], "any", false, false, false, 60), "username", [], "any", false, false, false, 60), "html", null, true);
             echo " -
               <a class=\"p-2 mb-2 bg-secondary text-dark\" href=\"";
-            // line 62
+            // line 61
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             echo "\">Sign out</a>
             </span>
             ";
         }
-        // line 65
+        // line 64
         echo "          </div>
         </div>
       </nav>
-
     </div>
 
     <div class=\"titre\">
       <!-- <h2 class=\"text\">Thomas Neveu Web Developer &amp; Mobile Web</h2> -->
       <h1 class=\"text\">";
-        // line 73
+        // line 71
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Thomas Neveu Web Developer &amp; Mobile Web", [], "messages");
         echo "</h1>
     </div>
@@ -317,7 +315,7 @@ class __TwigTemplate_eb3a4943d641fffac5237f6c8d7272ad extends Template
 
     }
 
-    // line 91
+    // line 89
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -347,7 +345,7 @@ class __TwigTemplate_eb3a4943d641fffac5237f6c8d7272ad extends Template
 
     public function getDebugInfo()
     {
-        return array (  321 => 91,  294 => 73,  284 => 65,  278 => 62,  273 => 61,  271 => 60,  261 => 55,  254 => 51,  247 => 47,  238 => 43,  227 => 34,  221 => 33,  213 => 30,  208 => 29,  205 => 28,  201 => 27,  196 => 25,  188 => 19,  178 => 18,  160 => 13,  141 => 8,  126 => 122,  109 => 108,  97 => 99,  93 => 98,  89 => 97,  82 => 92,  80 => 91,  77 => 90,  75 => 18,  69 => 14,  67 => 13,  62 => 11,  56 => 8,  47 => 1,);
+        return array (  319 => 89,  292 => 71,  283 => 64,  277 => 61,  272 => 60,  270 => 59,  260 => 54,  253 => 50,  246 => 46,  237 => 42,  226 => 33,  220 => 32,  212 => 29,  207 => 28,  204 => 27,  200 => 26,  195 => 24,  187 => 18,  177 => 17,  159 => 13,  140 => 8,  125 => 120,  108 => 106,  96 => 97,  92 => 96,  88 => 95,  81 => 90,  79 => 89,  76 => 88,  74 => 17,  69 => 14,  67 => 13,  62 => 11,  56 => 8,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -365,7 +363,6 @@ class __TwigTemplate_eb3a4943d641fffac5237f6c8d7272ad extends Template
   <link rel=\"stylesheet\" href=\"{{ asset('css/style.css') }}\">
 
   {% block stylesheets %}{% endblock %}
-
 </head>
 
 <body>
@@ -419,7 +416,6 @@ class __TwigTemplate_eb3a4943d641fffac5237f6c8d7272ad extends Template
           </div>
         </div>
       </nav>
-
     </div>
 
     <div class=\"titre\">

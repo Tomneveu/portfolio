@@ -45,7 +45,7 @@ class __TwigTemplate_12fc7cad5acdfc8422c7de62289a143a extends Template
 
         // line 1
         echo "<!DOCTYPE html>
-<html lang=\"fr\">
+<html>
 
 <head>
   <meta charset=\"UTF-8\">
@@ -68,141 +68,151 @@ class __TwigTemplate_12fc7cad5acdfc8422c7de62289a143a extends Template
         // line 14
         echo "</head>
 
-
-<body class=\"container-fluid\">
-<div class=\"titre\"></div>
-<header>
-  ";
-        // line 20
+<body>
+  <header>
+    ";
+        // line 18
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 20, $this->source); })()), "flashes", [["success", "danger"]], "method", false, false, false, 20));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 18, $this->source); })()), "flashes", [["success", "danger"]], "method", false, false, false, 18));
         foreach ($context['_seq'] as $context["label"] => $context["messages"]) {
-            // line 21
-            echo "  ";
+            // line 19
+            echo "    ";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($context["messages"]);
             foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-                // line 22
-                echo "  <div class=\"flash-";
+                // line 20
+                echo "    <div class=\"flash-";
                 echo twig_escape_filter($this->env, $context["label"], "html", null, true);
                 echo " p-3 fixed-top bg-";
                 echo twig_escape_filter($this->env, $context["label"], "html", null, true);
                 echo " text-white text-center\">
-    ";
-                // line 23
+      ";
+                // line 21
                 echo twig_escape_filter($this->env, $context["message"], "html", null, true);
                 echo "
-  </div>
-  ";
+    </div>
+    ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 26
-            echo "  ";
+            // line 24
+            echo "    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['label'], $context['messages'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 27
+        // line 25
         echo "
-  <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
-    <a id=\"Home\" class=\"navbar-brand\" href=\"";
-        // line 29
+    <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
+      <a id=\"Home\" class=\"navbar-brand\" href=\"";
+        // line 27
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
-        echo "\">ThomasNev</a>
-    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\"
-      aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-      <span class=\"navbar-toggler-icon\"></span>
-    </button>
+        echo "\">ThomDev</a>
+      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\"
+        aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+        <span class=\"navbar-toggler-icon\"></span>
+      </button>
 
-    <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
-      <ul class=\"navbar-nav\">
-        <li class=\"nav-item active\">
-          <a class=\"nav-link\" href=\"";
-        // line 38
+      <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
+        <ul class=\"navbar-nav\">
+          <li class=\"nav-item active\">
+            <a class=\"nav-link\" href=\"";
+        // line 36
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\">Home <span class=\"sr-only\">(current)</span></a>
-        </li>
-        <!-- <li class=\"nav-item\">
-            <a class=\"nav-link\" href=\"#projects\">Mes projets</a>
-          </li> -->
-        ";
-        // line 43
+          </li>
+          <!-- <li class=\"nav-item\">
+                <a class=\"nav-link\" href=\"#projects\">Mes projets</a>
+              </li> -->
+          ";
+        // line 41
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-            // line 44
-            echo "        <li class=\"nav-item\">
-          <a class=\"nav-link\" href=\"";
-            // line 45
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin");
+            // line 42
+            echo "          <li class=\"nav-item\">
+            <a class=\"nav-link\" href=\"";
+            // line 43
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_skills");
             echo "\">Skills</a>
-        </li>
-        ";
+          </li>
+          ";
         }
-        // line 48
-        echo "        <li class=\"nav-item\">
-          <a class=\"nav-link\" href=\"";
-        // line 49
+        // line 46
+        echo "          <li class=\"nav-item\">
+            <a class=\"nav-link\" href=\"";
+        // line 47
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
         echo "\">Login</a>
-        </li>
-        <li class=\"nav-item\">
-          <a class=\"nav-link\" href=\"";
-        // line 52
+          </li>
+          <li class=\"nav-item\">
+            <a class=\"nav-link\" href=\"";
+        // line 50
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
         echo "\">Register</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-</header>
+    <div class=\"titre\">
+      <!-- <h2 class=\"text\">Thomas Neveu Web Developer &amp; Mobile Web</h2> -->
+      <h1 class=\"text\">Admin</h1>
+    </div>
+
+  </header>
 
   ";
-        // line 60
+        // line 63
         $this->displayBlock('body', $context, $blocks);
-        // line 61
+        // line 64
         echo "  <button onclick=\"window.history.back();\" type=\"button\" class=\"btn btn-outline-danger float-left\">Back</button>
 </body>
 
-  ";
-        // line 64
+";
+        // line 67
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 65
-        echo "<footer>
-  <hr>
-  <div class=\"d-flex justify-content-around\">
-    <div class=\"p-2 text-center p-5\">
-      <ul>
-        <li><a href=\"";
-        // line 70
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
-        echo "\">Home page</a></li>
-        <li><a href=\"";
+        // line 68
+        echo "<div class=\"container\">
+  <footer class=\"py-3 my-4\">
+    <ul class=\"nav justify-content-center border-bottom pb-3 mb-3\">
+      <li class=\"nav-item\"><a href=\"";
         // line 71
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
+        echo "\" class=\"nav-link px-2 text-muted\">Home</a></li>
+      <li class=\"nav-item\"><a href=\"";
+        // line 72
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin");
-        echo "\">Admin</a></li>
-      </ul>
-    </div>
+        echo "\" class=\"nav-link px-2 text-muted\">Admin</a></li>
+      <li class=\"nav-item\"><a href=\"";
+        // line 73
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
+        echo "\" class=\"nav-link px-2 text-muted\">Sign up</a></li>
+      <li class=\"nav-item\"><a href=\"";
+        // line 74
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact");
+        echo "\" class=\"nav-link px-2 text-muted\"><svg width=\"1em\"
+            height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-envelope-fill\" fill=\"currentColor\"
+            xmlns=\"http://www.w3.org/2000/svg\">
+            <path fill-rule=\"evenodd\"
+              d=\"M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z\" />
+          </svg>
+          Contact</a></li>
+      <li class=\"nav-item\"><a href=\"#\" class=\"nav-link px-2 text-muted\">About</a></li>
+    </ul>
+    <p class=\"text-center text-muted\">";
+        // line 83
+        echo (isset($context["copyright"]) || array_key_exists("copyright", $context) ? $context["copyright"] : (function () { throw new RuntimeError('Variable "copyright" does not exist.', 83, $this->source); })());
+        echo "</p>
+  </footer>
+</div>
 
-    <div id=\"about\" class=\"p-2 text-center p-5\">
-      <h3>Thomas Neveu</h3>
-      <p>Web Developer & Mobile Web</p>
-      <div class=\"dropdown-divider\"></div>
-      <p><a href=\"mailto:Tneveu91@gmail.com\">Tneveu91@gmail.com</a></p>
-    </div>
-  </div>
-</footer>
-
-  <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\"
-    integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\"
-    crossorigin=\"anonymous\"></script>
-  <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\"
-    integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\"
-    crossorigin=\"anonymous\"></script>
-  <script src=\"https://code.jquery.com/jquery-3.5.1.js\" integrity=\"sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=\"
-    crossorigin=\"anonymous\"></script>
-  <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js\"></script>
+<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\"
+  integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
+<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\"
+  integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
+<script src=\"https://code.jquery.com/jquery-3.5.1.js\" integrity=\"sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=\"
+  crossorigin=\"anonymous\"></script>
+<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js\"></script>
 
 </html>";
         
@@ -250,7 +260,7 @@ class __TwigTemplate_12fc7cad5acdfc8422c7de62289a143a extends Template
 
     }
 
-    // line 60
+    // line 63
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -268,7 +278,7 @@ class __TwigTemplate_12fc7cad5acdfc8422c7de62289a143a extends Template
 
     }
 
-    // line 64
+    // line 67
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -298,13 +308,13 @@ class __TwigTemplate_12fc7cad5acdfc8422c7de62289a143a extends Template
 
     public function getDebugInfo()
     {
-        return array (  272 => 64,  254 => 60,  236 => 13,  217 => 8,  183 => 71,  179 => 70,  172 => 65,  170 => 64,  165 => 61,  163 => 60,  152 => 52,  146 => 49,  143 => 48,  137 => 45,  134 => 44,  132 => 43,  124 => 38,  112 => 29,  108 => 27,  102 => 26,  93 => 23,  86 => 22,  81 => 21,  77 => 20,  69 => 14,  67 => 13,  62 => 11,  56 => 8,  47 => 1,);
+        return array (  282 => 67,  264 => 63,  246 => 13,  227 => 8,  204 => 83,  192 => 74,  188 => 73,  184 => 72,  180 => 71,  175 => 68,  173 => 67,  168 => 64,  166 => 63,  150 => 50,  144 => 47,  141 => 46,  135 => 43,  132 => 42,  130 => 41,  122 => 36,  110 => 27,  106 => 25,  100 => 24,  91 => 21,  84 => 20,  79 => 19,  75 => 18,  69 => 14,  67 => 13,  62 => 11,  56 => 8,  47 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<!DOCTYPE html>
-<html lang=\"fr\">
+<html>
 
 <head>
   <meta charset=\"UTF-8\">
@@ -318,83 +328,84 @@ class __TwigTemplate_12fc7cad5acdfc8422c7de62289a143a extends Template
   {% block stylesheets %}{% endblock %}
 </head>
 
-
-<body class=\"container-fluid\">
-<div class=\"titre\"></div>
-<header>
-  {% for label, messages in app.flashes(['success', 'danger']) %}
-  {% for message in messages %}
-  <div class=\"flash-{{ label }} p-3 fixed-top bg-{{ label }} text-white text-center\">
-    {{ message }}
-  </div>
-  {% endfor %}
-  {% endfor %}
-
-  <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
-    <a id=\"Home\" class=\"navbar-brand\" href=\"{{ path('home') }}\">ThomasNev</a>
-    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\"
-      aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-      <span class=\"navbar-toggler-icon\"></span>
-    </button>
-
-    <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
-      <ul class=\"navbar-nav\">
-        <li class=\"nav-item active\">
-          <a class=\"nav-link\" href=\"{{ path('home') }}\">Home <span class=\"sr-only\">(current)</span></a>
-        </li>
-        <!-- <li class=\"nav-item\">
-            <a class=\"nav-link\" href=\"#projects\">Mes projets</a>
-          </li> -->
-        {% if is_granted('ROLE_ADMIN') %}
-        <li class=\"nav-item\">
-          <a class=\"nav-link\" href=\"{{ path('admin') }}\">Skills</a>
-        </li>
-        {% endif %}
-        <li class=\"nav-item\">
-          <a class=\"nav-link\" href=\"{{ path('app_login') }}\">Login</a>
-        </li>
-        <li class=\"nav-item\">
-          <a class=\"nav-link\" href=\"{{ path('app_register') }}\">Register</a>
-        </li>
-      </ul>
+<body>
+  <header>
+    {% for label, messages in app.flashes(['success', 'danger']) %}
+    {% for message in messages %}
+    <div class=\"flash-{{ label }} p-3 fixed-top bg-{{ label }} text-white text-center\">
+      {{ message }}
     </div>
-  </nav>
+    {% endfor %}
+    {% endfor %}
 
-</header>
+    <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
+      <a id=\"Home\" class=\"navbar-brand\" href=\"{{ path('home') }}\">ThomDev</a>
+      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\"
+        aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+        <span class=\"navbar-toggler-icon\"></span>
+      </button>
+
+      <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
+        <ul class=\"navbar-nav\">
+          <li class=\"nav-item active\">
+            <a class=\"nav-link\" href=\"{{ path('home') }}\">Home <span class=\"sr-only\">(current)</span></a>
+          </li>
+          <!-- <li class=\"nav-item\">
+                <a class=\"nav-link\" href=\"#projects\">Mes projets</a>
+              </li> -->
+          {% if is_granted('ROLE_ADMIN') %}
+          <li class=\"nav-item\">
+            <a class=\"nav-link\" href=\"{{ path('admin_skills') }}\">Skills</a>
+          </li>
+          {% endif %}
+          <li class=\"nav-item\">
+            <a class=\"nav-link\" href=\"{{ path('app_login') }}\">Login</a>
+          </li>
+          <li class=\"nav-item\">
+            <a class=\"nav-link\" href=\"{{ path('app_register') }}\">Register</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class=\"titre\">
+      <!-- <h2 class=\"text\">Thomas Neveu Web Developer &amp; Mobile Web</h2> -->
+      <h1 class=\"text\">Admin</h1>
+    </div>
+
+  </header>
 
   {% block body %}{% endblock %}
   <button onclick=\"window.history.back();\" type=\"button\" class=\"btn btn-outline-danger float-left\">Back</button>
 </body>
 
-  {% block javascripts %}{% endblock %}
-<footer>
-  <hr>
-  <div class=\"d-flex justify-content-around\">
-    <div class=\"p-2 text-center p-5\">
-      <ul>
-        <li><a href=\"{{ path('home') }}\">Home page</a></li>
-        <li><a href=\"{{ path('admin') }}\">Admin</a></li>
-      </ul>
-    </div>
+{% block javascripts %}{% endblock %}
+<div class=\"container\">
+  <footer class=\"py-3 my-4\">
+    <ul class=\"nav justify-content-center border-bottom pb-3 mb-3\">
+      <li class=\"nav-item\"><a href=\"{{ path('home') }}\" class=\"nav-link px-2 text-muted\">Home</a></li>
+      <li class=\"nav-item\"><a href=\"{{ path('admin') }}\" class=\"nav-link px-2 text-muted\">Admin</a></li>
+      <li class=\"nav-item\"><a href=\"{{ path('app_register') }}\" class=\"nav-link px-2 text-muted\">Sign up</a></li>
+      <li class=\"nav-item\"><a href=\"{{ path('contact') }}\" class=\"nav-link px-2 text-muted\"><svg width=\"1em\"
+            height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-envelope-fill\" fill=\"currentColor\"
+            xmlns=\"http://www.w3.org/2000/svg\">
+            <path fill-rule=\"evenodd\"
+              d=\"M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z\" />
+          </svg>
+          Contact</a></li>
+      <li class=\"nav-item\"><a href=\"#\" class=\"nav-link px-2 text-muted\">About</a></li>
+    </ul>
+    <p class=\"text-center text-muted\">{{ copyright|raw }}</p>
+  </footer>
+</div>
 
-    <div id=\"about\" class=\"p-2 text-center p-5\">
-      <h3>Thomas Neveu</h3>
-      <p>Web Developer & Mobile Web</p>
-      <div class=\"dropdown-divider\"></div>
-      <p><a href=\"mailto:Tneveu91@gmail.com\">Tneveu91@gmail.com</a></p>
-    </div>
-  </div>
-</footer>
-
-  <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\"
-    integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\"
-    crossorigin=\"anonymous\"></script>
-  <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\"
-    integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\"
-    crossorigin=\"anonymous\"></script>
-  <script src=\"https://code.jquery.com/jquery-3.5.1.js\" integrity=\"sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=\"
-    crossorigin=\"anonymous\"></script>
-  <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js\"></script>
+<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\"
+  integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
+<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\"
+  integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
+<script src=\"https://code.jquery.com/jquery-3.5.1.js\" integrity=\"sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=\"
+  crossorigin=\"anonymous\"></script>
+<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js\"></script>
 
 </html>", "baseAdmin.html.twig", "C:\\wamp64\\www\\portfolio\\templates\\baseAdmin.html.twig");
     }

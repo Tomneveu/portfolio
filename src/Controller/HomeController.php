@@ -13,9 +13,9 @@ class HomeController extends AbstractController
      */
     public function index(SkillsRepository $skillsRepository)
     {
-        $skills1 = $skillsRepository->findProps(1);
-        $skills2 = $skillsRepository->findProps(2);
-        $skills3 = $skillsRepository->findProps(3);
+        $skills1 = $skillsRepository->findProps('Programming Languages/Technologies');
+        $skills2 = $skillsRepository->findProps('Frameworks/Libraries');
+        $skills3 = $skillsRepository->findProps('Databases');
 
         return $this->render('home/index.html.twig', [
             'skills1' => $skills1,

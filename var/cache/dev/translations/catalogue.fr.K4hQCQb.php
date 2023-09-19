@@ -22,7 +22,7 @@ $catalogue = new MessageCatalogue('fr', array (
                 d\'orthographe d\'URL ou',
     'return to the homepage' => 'retour à la page d\'accueil',
     'Contact me' => 'Contactez moi',
-    'Programming Languages / Technologies' => 'Langages de programmation / Technologies',
+    'Programming Languages / Technologies' => 'Langages / Technologies',
     'Frameworks / Libraries' => 'Frameworks / Bibliothèques',
     'Projects' => 'Projets',
     'Skills' => 'Compétences',

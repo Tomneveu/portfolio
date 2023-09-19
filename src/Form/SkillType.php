@@ -21,9 +21,9 @@ class SkillType extends AbstractType
             ])
             ->add('proprieties', ChoiceType::class, [
                 'choices' => [
-                    'Programming Languages/Technologies' => 1,
-                    'Frameworks/Libraries' => 2,
-                    'Databases' => 3,
+                    'Programming Languages/Technologies' => 'Programming Languages/Technologies',
+                    'Frameworks/Libraries' => 'Frameworks/Libraries',
+                    'Databases' => 'Databases',
                 ]
             ])
             ->add('save', SubmitType::class, [

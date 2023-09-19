@@ -101,7 +101,6 @@ class __TwigTemplate_ea4f954eaa767e2b99fffc0f21313274 extends Template
         // line 12
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formSkill"]) || array_key_exists("formSkill", $context) ? $context["formSkill"] : (function () { throw new RuntimeError('Variable "formSkill" does not exist.', 12, $this->source); })()), 'form_end');
         echo "
-    <button onclick=\"window.history.back();\" type=\"button\" class=\"btn btn-outline-danger float-right\">Back</button>
 </div>
 
 ";
@@ -142,7 +141,6 @@ class __TwigTemplate_ea4f954eaa767e2b99fffc0f21313274 extends Template
     <h3 id=\"projects\" class=\"h1 my-5\">Form skills</h3>
     {{ form_start(formSkill) }}
     {{ form_end(formSkill) }}
-    <button onclick=\"window.history.back();\" type=\"button\" class=\"btn btn-outline-danger float-right\">Back</button>
 </div>
 
 {% endblock %}", "admin/adminSkillsForm.html.twig", "C:\\wamp64\\www\\portfolio\\templates\\admin\\adminSkillsForm.html.twig");

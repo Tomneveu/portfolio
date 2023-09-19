@@ -161,8 +161,6 @@ class __TwigTemplate_b54dd366967716ce47d7050fb71743c4 extends Template
         // line 50
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("skill_create");
         echo "\" class=\"btn btn-primary float-left\">Ajouter</a>
-    <button onclick=\"window.history.back();\" type=\"button\" class=\"btn btn-outline-danger float-right\">Back</button>
-
 </div>
 
 ";
@@ -241,8 +239,6 @@ class __TwigTemplate_b54dd366967716ce47d7050fb71743c4 extends Template
         </tbody>
     </table>
     <a href=\"{{ path('skill_create') }}\" class=\"btn btn-primary float-left\">Ajouter</a>
-    <button onclick=\"window.history.back();\" type=\"button\" class=\"btn btn-outline-danger float-right\">Back</button>
-
 </div>
 
 {% endblock %}", "admin/adminSkills.html.twig", "C:\\wamp64\\www\\portfolio\\templates\\admin\\adminSkills.html.twig");

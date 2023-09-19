@@ -68,8 +68,8 @@
         <target>Contactez moi</target>
       </trans-unit>
       <trans-unit id=".cwNZB4" resname="Programming Languages / Technologies">
-        <source>Programming Languages / Technologies</source>
-        <target>Langages de programmation / Technologies</target>
+        <source>Languages / Technologies</source>
+        <target>Langages / Technologies</target>
       </trans-unit>
       <trans-unit id="h3O0dkj" resname="Frameworks / Libraries">
         <source>Frameworks / Libraries</source>
